@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-namespace WPFLocalizeExtension.Engine
+namespace WpfLocalisationExtension.Engine
 {
     /// <summary>
     /// This class ensures, that a specific object lives as long a associated object is alive.

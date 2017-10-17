@@ -14,9 +14,9 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Globalization;
 
-using WPFLocalizeExtension.Engine;
+using WpfLocalisationExtension.Engine;
 
-namespace WPFLocalizeExtension.Extensions
+namespace WpfLocalisationExtension.Extensions
 {
     /// <summary>
     /// A localization extension based on <see cref="Binding"/>.

@@ -9,11 +9,10 @@
 
 using System;
 using System.Windows.Markup;
-
-using WPFLocalizeExtension.Engine;
+using WpfLocalisationExtension.Engine;
 using XAMLMarkupExtensions.Base;
 
-namespace WPFLocalizeExtension.Extensions
+namespace WpfLocalisationExtension.Extensions
 {
 #pragma warning disable 1591
 

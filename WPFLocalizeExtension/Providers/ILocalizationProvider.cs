@@ -6,11 +6,11 @@
 // <author>Uwe Mayer</author>
 #endregion
 
-using System.Windows;
-using System.Globalization;
 using System.Collections.ObjectModel;
+using System.Globalization;
+using System.Windows;
 
-namespace WPFLocalizeExtension.Providers
+namespace WpfLocalisationExtension.Providers
 {
     /// <summary>
     /// An interface describing classes that provide localized values based on a source/dictionary/key combination.

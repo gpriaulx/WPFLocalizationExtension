@@ -9,10 +9,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
-
 using XAMLMarkupExtensions.Base;
 
-namespace WPFLocalizeExtension.Engine
+namespace WpfLocalisationExtension.Engine
 {
     /// <summary>
     /// A memory safe dictionary storage for <see cref="ParentChangedNotifier"/> instances.

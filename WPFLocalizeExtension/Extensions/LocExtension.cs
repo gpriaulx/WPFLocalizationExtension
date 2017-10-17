@@ -20,13 +20,12 @@ using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Media.Media3D;
-
-using WPFLocalizeExtension.Engine;
-using WPFLocalizeExtension.Providers;
-using WPFLocalizeExtension.TypeConverters;
+using WpfLocalisationExtension.Engine;
+using WpfLocalisationExtension.Providers;
+using WpfLocalisationExtension.TypeConverters;
 using XAMLMarkupExtensions.Base;
 
-namespace WPFLocalizeExtension.Extensions
+namespace WpfLocalisationExtension.Extensions
 {
     /// <summary>
     /// A generic localization extension.

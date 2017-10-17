@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net45</TargetFramework>
+    <AssemblyName>WpfLocalisationExtension</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Version>3.1.0</Version>
+    <AssemblyTitle>UrlDownloader</AssemblyTitle>
+    <Authors></Authors>
+    <PackageLicenseUrl>https://github.com/gpriaulx/WpfLocalisationExtension/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/gpriaulx/WpfLocalisationExtension/</PackageProjectUrl>
+    <Copyright></Copyright>
+    <Description>WpfLocalisationExtensionis a really easy way to localize any type of DependencyProperties or native Properties on DependencyObjects</Description>
+    <Company />
+    <Product>WpfLocalisationExtension</Product>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>v3.1.0
+* Moved to .Net 4.5
+* Changed Namespace to avoid compatibility issues.</PackageReleaseNotes>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageTags>wpf localization extension globalization resx csv resource language</PackageTags>
+    <RepositoryUrl>https://github.com/gpriaulx/WpfLocalisationExtension.git</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>WpfLocalisationExtension</PackageId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="XAMLMarkupExtensions" Version="1.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="System.Xml.Linq">
+      <SpecificVersion></SpecificVersion>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="System.Xml">
+      <SpecificVersion></SpecificVersion>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="System.Runtime.Serialization">
+      <SpecificVersion></SpecificVersion>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="System.Numerics">
+      <SpecificVersion></SpecificVersion>
+    </Reference>
+  </ItemGroup>
+
+</Project> 

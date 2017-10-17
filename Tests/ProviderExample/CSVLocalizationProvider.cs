@@ -6,6 +6,9 @@
 // <author>Uwe Mayer</author>
 #endregion
 
+using WpfLocalisationExtension.Engine;
+using WpfLocalisationExtension.Providers;
+
 namespace ProviderExample
 {
     using System;
@@ -19,8 +22,6 @@ namespace ProviderExample
     using System.Reflection;
     using System.Text;
     using System.Windows;
-    using WPFLocalizeExtension.Engine;
-    using WPFLocalizeExtension.Providers;
     using XAMLMarkupExtensions.Base;
 
     /// <summary>

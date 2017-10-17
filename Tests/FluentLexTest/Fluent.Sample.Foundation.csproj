@@ -163,9 +163,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\WPFLocalizeExtension\WPFLocalizeExtension.csproj">
+    <ProjectReference Include="..\..\WPFLocalizeExtension\WpfLocalisationExtension.csproj">
       <Project>{e8c5b094-2cb4-4c26-87f0-351b03612179}</Project>
-      <Name>WPFLocalizeExtension</Name>
+      <Name>WpfLocalisationExtension</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

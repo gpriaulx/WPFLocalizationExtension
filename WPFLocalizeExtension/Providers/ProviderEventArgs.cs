@@ -9,7 +9,7 @@
 using System;
 using System.Windows;
 
-namespace WPFLocalizeExtension.Providers
+namespace WpfLocalisationExtension.Providers
 {
     /// <summary>
     /// Events arguments for a ProviderChangedEventHandler.

@@ -8,10 +8,9 @@
 
 using System.ComponentModel;
 using System.Windows;
+using WpfLocalisationExtension.Extensions;
 
-using WPFLocalizeExtension.Extensions;
-
-namespace WPFLocalizeExtension.Engine
+namespace WpfLocalisationExtension.Engine
 {
     /// <summary>
     /// A proxy class to localize object strings.

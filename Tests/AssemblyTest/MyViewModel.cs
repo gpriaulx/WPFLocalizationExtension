@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
-using WPFLocalizeExtension.Providers;
+using WpfLocalisationExtension.Providers;
 
 namespace AssemblyTest
 {

@@ -9,7 +9,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace WPFLocalizeExtension.Engine
+namespace WpfLocalisationExtension.Engine
 {
     /// <summary>
     /// A types version of <see cref="WeakReference"/>.

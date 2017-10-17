@@ -8,10 +8,9 @@
 
 using System.Windows;
 using System.Windows.Data;
+using WpfLocalisationExtension.Extensions;
 
-using WPFLocalizeExtension.Extensions;
-
-namespace WPFLocalizeExtension.Engine
+namespace WpfLocalisationExtension.Engine
 {
     /// <summary>
     /// A binding proxy class that accepts bindings and forwards them to the LocExtension.

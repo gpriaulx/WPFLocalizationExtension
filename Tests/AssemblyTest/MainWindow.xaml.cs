@@ -1,4 +1,7 @@
-﻿namespace AssemblyTest
+﻿using WpfLocalisationExtension.Extensions;
+using WpfLocalisationExtension.Providers;
+
+namespace AssemblyTest
 {
     using System;
     using System.Diagnostics;
@@ -6,8 +9,6 @@
     using System.Threading;
     using System.Windows;
     using System.Windows.Documents;
-    using WPFLocalizeExtension.Extensions;
-    using WPFLocalizeExtension.Providers;
     using XAMLMarkupExtensions.Base;
     
     /// <summary>

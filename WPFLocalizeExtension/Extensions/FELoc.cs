@@ -17,12 +17,11 @@ using System.Windows.Data;
 using System.Windows.Markup.Primitives;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-
-using WPFLocalizeExtension.Engine;
-using WPFLocalizeExtension.TypeConverters;
+using WpfLocalisationExtension.Engine;
+using WpfLocalisationExtension.TypeConverters;
 using XAMLMarkupExtensions.Base;
 
-namespace WPFLocalizeExtension.Extensions
+namespace WpfLocalisationExtension.Extensions
 {
     /// <summary>
     /// A localization utility based on <see cref="FrameworkElement"/>.

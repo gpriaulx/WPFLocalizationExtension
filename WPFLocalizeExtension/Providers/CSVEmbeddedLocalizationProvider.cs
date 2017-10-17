@@ -16,11 +16,10 @@ using System.Reflection;
 using System.Resources;
 using System.Text;
 using System.Windows;
-
-using WPFLocalizeExtension.Engine;
+using WpfLocalisationExtension.Engine;
 using XAMLMarkupExtensions.Base;
 
-namespace WPFLocalizeExtension.Providers
+namespace WpfLocalisationExtension.Providers
 {
     /// <summary>
     /// A singleton CSV provider that uses attached properties and the Parent property to iterate through the visual tree.

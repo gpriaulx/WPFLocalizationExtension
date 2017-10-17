@@ -9,7 +9,7 @@
 using System.ComponentModel;
 using System.Windows.Media.Imaging;
 
-namespace WPFLocalizeExtension.TypeConverters
+namespace WpfLocalisationExtension.TypeConverters
 {
     /// <summary>
     /// Register missing type converters here.

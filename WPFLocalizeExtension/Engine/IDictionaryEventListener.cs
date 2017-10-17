@@ -9,7 +9,7 @@
 using System;
 using System.Windows;
 
-namespace WPFLocalizeExtension.Engine
+namespace WpfLocalisationExtension.Engine
 {
     /// <summary>
     /// Interface for listeners on dictionary events of the <see cref="LocalizeDictionary"/> class.

@@ -9,13 +9,13 @@
 
 using System;
 using System.ComponentModel;
-using System.Windows;
-using System.Windows.Media.Imaging;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Globalization;
+using System.Windows;
+using System.Windows.Media.Imaging;
 
-namespace WPFLocalizeExtension.TypeConverters
+namespace WpfLocalisationExtension.TypeConverters
 {
     /// <summary>
     /// A type converter class for Bitmap resources that are used in WPF.

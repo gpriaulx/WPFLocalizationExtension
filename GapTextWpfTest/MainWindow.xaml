@@ -7,8 +7,10 @@
         xmlns:system="clr-namespace:System;assembly=mscorlib"
         xmlns:converters="clr-namespace:GapTextWpfTest.Converters"
         xmlns:lex="http://wpflocalizeextension.codeplex.com"
-        lex:ResxLocalizationProvider.DefaultAssembly="GapTextWpfTest"
-        lex:ResxLocalizationProvider.DefaultDictionary="Resources"
+        xmlns:providers="clr-namespace:WpfLocalisationExtension.Providers;assembly=WpfLocalisationExtension"
+        xmlns:engine="clr-namespace:WpfLocalisationExtension.Engine;assembly=WpfLocalisationExtension"
+        providers:ResxLocalizationProvider.DefaultAssembly="GapTextWpfTest"
+        providers:ResxLocalizationProvider.DefaultDictionary="Resources"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="200"
         DataContext="{Binding RelativeSource={RelativeSource Self}}">
@@ -35,7 +37,7 @@
             <Run Text="The shop in " />
             <TextBox Text="{Binding City}" />
             <Run Text=" is open on " />
-            <lex:EnumComboBox Type="{x:Type local:WeekDay}" />
+            <engine:EnumComboBox Type="{x:Type local:WeekDay}" />
             <Run Text=" from " />
             <TextBox Text="{Binding OpeningTime}" />
             <Run Text=" to " />
@@ -44,43 +46,298 @@
         </TextBlock>
         
         <Label Background="DarkOrange" Content="Z" />
-        <lex:GapTextControl FormatString="The shop in {0} is open on {1} from {2} to {3}. We could have more of these in {0}!">
-            <lex:GapTextControl.Template>
+        <engine:GapTextControl FormatString="The shop in {0} is open on {1} from {2} to {3}. We could have more of these in {0}!">
+            <engine:GapTextControl.Template>
                 <ControlTemplate>
                     <TextBlock x:Name="PART_TextBlock" />
                 </ControlTemplate>
-            </lex:GapTextControl.Template>
-            <lex:GapTextControl.Gaps>
+            </engine:GapTextControl.Template>
+            <engine:GapTextControl.Gaps>
                 <TextBox Name="Test" Text="{Binding City}" TextChanged="TestTextChanged" />
-                <lex:EnumComboBox Type="{x:Type local:WeekDay}" />
+                <engine:EnumComboBox Type="{x:Type local:WeekDay}" />
                 <DatePicker SelectedDate="{Binding OpeningTime}" />
                 <DatePicker SelectedDate="{Binding ClosingTime}" />
-            </lex:GapTextControl.Gaps>
-        </lex:GapTextControl>
+            </engine:GapTextControl.Gaps>
+        </engine:GapTextControl>
         
         <Label Background="DarkOrange" Content="Y" />
-        <lex:GapTextControl FormatString="Dies ist ein Test ohne Platzhalter">
-            <lex:GapTextControl.Template>
+        <engine:GapTextControl FormatString="Dies ist ein Test ohne Platzhalter">
+            <engine:GapTextControl.Template>
                 <ControlTemplate>
                     <TextBlock x:Name="PART_TextBlock" />
                 </ControlTemplate>
-            </lex:GapTextControl.Template>
-        </lex:GapTextControl>
+            </engine:GapTextControl.Template>
+        </engine:GapTextControl>
         
         <Label Background="DarkOrange" Content="X" />
-        <lex:GapTextControl FormatString="Ein Test mit {0}"
+        <engine:GapTextControl FormatString="Ein Test mit {0}"
                                  HorizontalAlignment="Stretch"
                                  MinHeight="100">
-            <lex:GapTextControl.Template>
+            <engine:GapTextControl.Template>
                 <ControlTemplate>
                     <Border BorderBrush="Red">
                         <TextBlock x:Name="PART_TextBlock" />
                     </Border>
                 </ControlTemplate>
-            </lex:GapTextControl.Template>
-            <lex:GapTextControl.Gaps>
+            </engine:GapTextControl.Template>
+            <engine:GapTextControl.Gaps>
                 <Run Text="[Test]" />
-            </lex:GapTextControl.Gaps>
-        </lex:GapTextControl>
+            </engine:GapTextControl.Gaps>
+        </engine:GapTextControl>
     </StackPanel>
 </Window>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

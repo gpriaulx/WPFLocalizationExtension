@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfLocalisationExtension.Engine;
 
 namespace MemoryTest
 {
@@ -23,7 +24,7 @@ namespace MemoryTest
         {
             InitializeComponent();
 
-            WPFLocalizeExtension.Engine.LocalizeDictionary.Instance.Culture = new System.Globalization.CultureInfo("en");
+            LocalizeDictionary.Instance.Culture = new System.Globalization.CultureInfo("en");
         }
 
         List<Window> windowList = new List<Window>();

@@ -7,7 +7,7 @@
 // <author>Uwe Mayer</author>
 #endregion
 
-namespace WPFLocalizeExtension.Providers
+namespace WpfLocalisationExtension.Providers
 {
     /// <summary>
     /// An abstract class for key identification.

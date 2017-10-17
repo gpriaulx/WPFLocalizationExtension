@@ -8,7 +8,7 @@
 
 using System;
 
-namespace WPFLocalizeExtension.Engine
+namespace WpfLocalisationExtension.Engine
 {
     /// <summary>
     /// Event arguments for a missing key event.

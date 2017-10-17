@@ -10,7 +10,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Windows;
 
-namespace WPFLocalizeExtension.TypeConverters
+namespace WpfLocalisationExtension.TypeConverters
 {
     /// <summary>
     /// A converter for the type <see cref="Thickness"/>.

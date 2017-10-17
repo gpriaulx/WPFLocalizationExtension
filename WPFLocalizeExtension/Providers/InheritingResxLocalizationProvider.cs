@@ -11,10 +11,9 @@ using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Resources;
 using System.Windows;
-
 using XAMLMarkupExtensions.Base;
 
-namespace WPFLocalizeExtension.Providers
+namespace WpfLocalisationExtension.Providers
 {
     /// <summary>
     /// A singleton RESX provider that uses inheriting attached properties.

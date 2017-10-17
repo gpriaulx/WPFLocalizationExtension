@@ -3,9 +3,12 @@
                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                      xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent"
                      xmlns:lex="http://wpflocalizeextension.codeplex.com"
-            lex:LocalizeDictionary.DesignCulture="en"
-            lex:ResxLocalizationProvider.DefaultAssembly="Fluent.Sample.Foundation"
-            lex:ResxLocalizationProvider.DefaultDictionary="Resources"
+                     xmlns:engine="clr-namespace:WpfLocalisationExtension.Engine;assembly=WpfLocalisationExtension"
+                     xmlns:providers="clr-namespace:WpfLocalisationExtension.Providers;assembly=WpfLocalisationExtension"
+                     xmlns:extensions="clr-namespace:WpfLocalisationExtension.Extensions;assembly=WpfLocalisationExtension"
+                     engine:LocalizeDictionary.DesignCulture="en"
+            providers:ResxLocalizationProvider.DefaultAssembly="Fluent.Sample.Foundation"
+            providers:ResxLocalizationProvider.DefaultDictionary="Resources"
                      Title="FluentLexTest"
 	                 Width="500" 
 	                 Height="250"
@@ -15,19 +18,19 @@
 			<!--Tabs-->
 			<Fluent:RibbonTabItem Header="Tab">
 				<Fluent:RibbonGroupBox Header="Group">
-					<Fluent:Button x:Name="buttonLanguage" Header="{lex:Loc}" Click="buttonLanguage_Click"/>
+					<Fluent:Button x:Name="buttonLanguage" Header="{extensions:Loc}" Click="buttonLanguage_Click"/>
 				</Fluent:RibbonGroupBox>
 			</Fluent:RibbonTabItem>
 					
 			<!--Backstage-->
 			<Fluent:Ribbon.Menu>
-                <Fluent:Backstage x:Name="backstage" Header="{lex:Loc}">
+                <Fluent:Backstage x:Name="backstage" Header="{extensions:Loc}">
                     <Fluent:BackstageTabControl>
-                        <Fluent:BackstageTabItem x:Name="informationBackStageItem" Header="{lex:Loc}" HorizontalAlignment="Left">
+                        <Fluent:BackstageTabItem x:Name="informationBackStageItem" Header="{extensions:Loc}" HorizontalAlignment="Left">
                             <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
                                 <StackPanel  Width="500" Margin="30" HorizontalAlignment="Left">
-                                    <TextBlock x:Name="textProductInfo" FontSize="18" Text="{lex:Loc}"/>
-                                    <Button Content="{lex:Loc buttonLanguage_Header}" Click="buttonLanguage_Click" />
+                                    <TextBlock x:Name="textProductInfo" FontSize="18" Text="{extensions:Loc}"/>
+                                    <Button Content="{extensions:Loc buttonLanguage_Header}" Click="buttonLanguage_Click" />
                                 </StackPanel>
                             </ScrollViewer>
                         </Fluent:BackstageTabItem>

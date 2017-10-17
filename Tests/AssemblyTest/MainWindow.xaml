@@ -1,22 +1,25 @@
 ﻿<Window x:Class="AssemblyTest.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:lex="http://wpflocalizeextension.codeplex.com"
         xmlns:Example="clr-namespace:ProviderExample;assembly=ProviderExample"
         xmlns:Ext="clr-namespace:XAMLMarkupExtensions.Strings;assembly=XAMLMarkupExtensions"
         xmlns:Local="clr-namespace:AssemblyTest"
         xmlns:c="clr-namespace:System.Collections.Generic;assembly=mscorlib"
         xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
-        lex:LocalizeDictionary.DesignCulture="en"
-        lex:LocalizeDictionary.OutputMissingKeys="True"
-        lex:ResxLocalizationProvider.DefaultAssembly="AssemblyTestResourceLib"
-        lex:ResxLocalizationProvider.DefaultDictionary="Strings"
+        xmlns:engine="clr-namespace:WpfLocalisationExtension.Engine;assembly=WpfLocalisationExtension"
+        xmlns:providers="clr-namespace:WpfLocalisationExtension.Providers;assembly=WpfLocalisationExtension"
+        xmlns:extensions="clr-namespace:WpfLocalisationExtension.Extensions;assembly=WpfLocalisationExtension"
+        engine:LocalizeDictionary.DesignCulture="en"
+        engine:LocalizeDictionary.OutputMissingKeys="True"
+        providers:ResxLocalizationProvider.DefaultAssembly="WPFLocalizationExtensionDemoApplication"
+        providers:ResxLocalizationProvider.DefaultDictionary="Strings"
         Title="MainWindow"
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance Type={x:Type Local:MyViewModel}, IsDesignTimeCreatable=True}"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="479" Width="329">
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Height="479" Width="329">
     
         <!--Use this syntax to set the inheriting provider-->
         <!--lex:LocalizeDictionary.DefaultProvider="{x:Static lex:InheritingResxLocalizationProvider.Instance}"
@@ -41,7 +44,7 @@
                 <Grid Margin="5">
                     <Grid.Resources>
                         <ResourceDictionary>
-                            <lex:LocExtension x:Key="LocalizedImage" x:Name="LocalizedImage" />
+                            <extensions:LocExtension x:Key="LocalizedImage" x:Name="LocalizedImage" />
                         </ResourceDictionary>
                     </Grid.Resources>
                     <Grid.ColumnDefinitions>
@@ -53,12 +56,12 @@
                         <RowDefinition />
                         <RowDefinition />
                     </Grid.RowDefinitions>
-                    <lex:LocBinding Source="{Binding FlagSource}" Target="{x:Reference LocalizedImage}" />
+                    <engine:LocBinding Source="{Binding FlagSource}" Target="{x:Reference LocalizedImage}" />
                     <Image Grid.RowSpan="3" Grid.Column="0" Height="50" Source="{x:Reference LocalizedImage}" />
-                    <Label Grid.Row="0" Grid.Column="1" Content="{lex:Loc Country}" />
+                    <Label Grid.Row="0" Grid.Column="1" Content="{extensions:Loc Country}" />
                     <Label Grid.Row="0" Grid.Column="2" Content="{Binding Country}" />
-                    <Label Grid.Row="1" Grid.Column="1" Content="{lex:Loc Area}" />
-                    <Local:StringFormatProxy x:Name="SFP" Value="{Binding Area}" StringFormat="{lex:Loc TestFormat}" />
+                    <Label Grid.Row="1" Grid.Column="1" Content="{extensions:Loc Area}" />
+                    <Local:StringFormatProxy x:Name="SFP" Value="{Binding Area}" StringFormat="{extensions:Loc TestFormat}" />
                     <TextBlock Padding="5" Grid.Row="1" Grid.Column="2" Text="{Binding Result, ElementName=SFP}" />
                 </Grid>
             </Border>
@@ -81,20 +84,20 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <ComboBox ItemsSource="{Binding Source={x:Static lex:LocalizeDictionary.Instance}, Path=MergedAvailableCultures}"
-                  SelectedItem="{Binding Source={x:Static lex:LocalizeDictionary.Instance}, Path=Culture}"
+        <ComboBox ItemsSource="{Binding Source={x:Static engine:LocalizeDictionary.Instance}, Path=MergedAvailableCultures}"
+                  SelectedItem="{Binding Source={x:Static engine:LocalizeDictionary.Instance}, Path=Culture}"
                   DisplayMemberPath="NativeName"
                   Margin="2"/>
-        <StackPanel Name="TestPanel" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" lex:ResxLocalizationProvider.DefaultDictionary="Strings2">
-            <Button Name="ButtonDE" Height="23" Width="75" CommandParameter="de" Command="{Binding Source={x:Static lex:LocalizeDictionary.Instance}, Path=SetCultureCommand}" lex:ResxLocalizationProvider.DefaultAssembly="AssemblyTestResourceLib">
-                <lex:FELoc />
+        <StackPanel Name="TestPanel" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" providers:ResxLocalizationProvider.DefaultDictionary="Strings2">
+            <Button Name="ButtonDE" Height="23" Width="75" CommandParameter="de" Command="{Binding Source={x:Static engine:LocalizeDictionary.Instance}, Path=SetCultureCommand}" providers:ResxLocalizationProvider.DefaultAssembly="AssemblyTestResourceLib">
+                <extensions:FELoc />
             </Button>
-            <Button Content="{lex:Loc ButtonEN, Converter={StaticResource CaseConverter}, ConverterParameter=Lower}" Height="23" Width="75" CommandParameter="" Command="{Binding Source={x:Static lex:LocalizeDictionary.Instance}, Path=SetCultureCommand}" />
-            <Button Content="{lex:Loc ButtonEN}" Height="23" Width="75" CommandParameter="" Command="{Binding Source={x:Static lex:LocalizeDictionary.Instance}, Path=SetCultureCommand}" />
+            <Button Content="{extensions:Loc ButtonEN, Converter={StaticResource CaseConverter}, ConverterParameter=Lower}" Height="23" Width="75" CommandParameter="" Command="{Binding Source={x:Static engine:LocalizeDictionary.Instance}, Path=SetCultureCommand}" />
+            <Button Content="{extensions:Loc ButtonEN}" Height="23" Width="75" CommandParameter="" Command="{Binding Source={x:Static engine:LocalizeDictionary.Instance}, Path=SetCultureCommand}" />
         </StackPanel>
-        <Button Grid.Row="2" HorizontalAlignment="Center" Name="ButtonAssembly" Click="ButtonAssembly_Click" Content="{lex:LocText FormatSegment1=A}" Width="{lex:Loc}" Margin="{lex:Loc}" Background="{lex:Loc}" FlowDirection="{lex:Loc}" />
-        <Image Grid.Row="3" Source="{lex:Loc TestImage}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-        <ListBox Grid.Row="4" ItemTemplate="{DynamicResource TestTemplate}" lex:ResxLocalizationProvider.DefaultAssembly="AssemblyTest" lex:ResxLocalizationProvider.DefaultDictionary="CountryRes">
+        <Button Grid.Row="2" HorizontalAlignment="Center" Name="ButtonAssembly" Click="ButtonAssembly_Click" Content="{extensions:LocText FormatSegment1=A}" Width="{extensions:Loc}" Margin="{extensions:Loc}" Background="{extensions:Loc}" FlowDirection="{extensions:Loc}" />
+        <Image Grid.Row="3" Source="{extensions:Loc TestImage}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <ListBox Grid.Row="4" ItemTemplate="{DynamicResource TestTemplate}" providers:ResxLocalizationProvider.DefaultAssembly="AssemblyTest" providers:ResxLocalizationProvider.DefaultDictionary="CountryRes">
             <Local:Countries Country="Austria" CountryDE="Österreich" Area="83855" />
             <Local:Countries Country="France" CountryDE="Frankreich" Area="543965" />
             <Local:Countries Country="Germany" CountryDE="Deutschland" Area="357039" />
@@ -105,7 +108,7 @@
                           Source="{Binding EnumValue}" />
         </TextBlock>-->
         <TextBlock Grid.Row="5" Text="{Binding ElementName=Proxy, Path=Result}">
-            <lex:EnumRun PrependType="True" EnumValue="{Binding EnumValue}" />
+            <engine:EnumRun PrependType="True" EnumValue="{Binding EnumValue}" />
         </TextBlock>
         <!--<TextBox Grid.Row="5" lex:ResxLocalizationProvider.DefaultAssembly="AssemblyTest" lex:ResxLocalizationProvider.DefaultDictionary="CountryRes">
             <TextBox.Text>
@@ -115,7 +118,7 @@
                 </Ext:CatExtension>
             </TextBox.Text>
         </TextBox>-->
-        <lex:EnumComboBox Grid.Row="6" Margin="2" PrependType="True" lex:LocalizeDictionary.Provider="{StaticResource ResourceKey=CSVProvider}" Type="{x:Type Local:TestEnum}">
+        <engine:EnumComboBox Grid.Row="6" Margin="2" PrependType="True" engine:LocalizeDictionary.Provider="{StaticResource ResourceKey=CSVProvider}" Type="{x:Type Local:TestEnum}">
             <!--<lex:EnumComboBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock><lex:EnumRun EnumValue="{Binding}" PrependType="{Binding PrependType, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=lex:EnumComboBox}}" /></TextBlock>
@@ -135,7 +138,7 @@
                     </Setter>
                 </Style>
             </lex:EnumComboBox.Style>-->
-        </lex:EnumComboBox>
+        </engine:EnumComboBox>
         <!--<TextBox Grid.Row="6" lex:ResxLocalizationProvider.DefaultAssembly="AssemblyTest" lex:ResxLocalizationProvider.DefaultDictionary="CountryRes">
             <TextBox.Text>
                 <MultiBinding StringFormat="Binding test (no design time!): {0} - {1}">
@@ -151,9 +154,9 @@
                 <DataTemplate DataType="{x:Type TabItem}">
                     <StackPanel Orientation="Horizontal">
                         <StackPanel.Resources>
-                            <lex:LocExtension x:Key="LocalizedHeader" x:Name="LocalizedHeader" />
+                            <extensions:LocExtension x:Key="LocalizedHeader" x:Name="LocalizedHeader" />
                         </StackPanel.Resources>
-                        <lex:LocBinding Source="{Binding TranslationKey}" Target="{x:Reference LocalizedHeader}" />
+                        <engine:LocBinding Source="{Binding TranslationKey}" Target="{x:Reference LocalizedHeader}" />
                         <TextBlock Text="{x:Reference LocalizedHeader}" />
                     </StackPanel>
                 </DataTemplate>
@@ -163,7 +166,7 @@
             <FlowDocument>
                 <Paragraph>
                     <!--<Run Text="{lex:Loc ButtonDE}" />-->
-                    <Run Name="TestObject" lex:ResxLocalizationProvider.DefaultAssembly="AssemblyTest" lex:ResxLocalizationProvider.DefaultDictionary="Resource.With.Dot" Text="{lex:Loc Test}" />
+                    <Run Name="TestObject" providers:ResxLocalizationProvider.DefaultAssembly="AssemblyTest" providers:ResxLocalizationProvider.DefaultDictionary="Resource.With.Dot" Text="{extensions:Loc Test}" />
                     <Button Content="Who is bound here?" Click="Button_Click" />
                 </Paragraph>
             </FlowDocument>
@@ -171,3 +174,10 @@
         <Button Grid.Row="9" Content="Multiple UI Threads" Margin="5" Click="ButtonMultiThreading_Click" />
     </Grid>
 </Window>
+
+
+
+
+
+
+

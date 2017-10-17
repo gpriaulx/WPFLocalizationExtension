@@ -19,21 +19,20 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Markup;
 using System.Windows.Threading;
-
-using WPFLocalizeExtension.Extensions;
-using WPFLocalizeExtension.Providers;
+using WpfLocalisationExtension.Extensions;
+using WpfLocalisationExtension.Providers;
 using XAMLMarkupExtensions.Base;
 
 // Register this namespace one with prefix
-[assembly: XmlnsDefinition("http://wpflocalizeextension.codeplex.com", "WPFLocalizeExtension.Engine")]
-[assembly: XmlnsDefinition("http://wpflocalizeextension.codeplex.com", "WPFLocalizeExtension.Extensions")]
-[assembly: XmlnsDefinition("http://wpflocalizeextension.codeplex.com", "WPFLocalizeExtension.Providers")]
-[assembly: XmlnsDefinition("http://wpflocalizeextension.codeplex.com", "WPFLocalizeExtension.TypeConverters")]
+[assembly: XmlnsDefinition("http://wpflocalizeextension.codeplex.com", "WpfLocalisationExtension.Engine")]
+[assembly: XmlnsDefinition("http://wpflocalizeextension.codeplex.com", "WpfLocalisationExtension.Extensions")]
+[assembly: XmlnsDefinition("http://wpflocalizeextension.codeplex.com", "WpfLocalisationExtension.Providers")]
+[assembly: XmlnsDefinition("http://wpflocalizeextension.codeplex.com", "WpfLocalisationExtension.TypeConverters")]
 
 // Assign a default namespace prefix for the schema
 [assembly: XmlnsPrefix("http://wpflocalizeextension.codeplex.com", "lex")]
 
-namespace WPFLocalizeExtension.Engine
+namespace WpfLocalisationExtension.Engine
 {
     /// <summary>
     /// Represents the culture interface for localization

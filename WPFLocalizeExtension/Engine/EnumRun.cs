@@ -10,10 +10,9 @@ using System;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Documents;
+using WpfLocalisationExtension.Extensions;
 
-using WPFLocalizeExtension.Extensions;
-
-namespace WPFLocalizeExtension.Engine
+namespace WpfLocalisationExtension.Engine
 {
     /// <summary>
     /// An extension of <see cref="T:System.Windows.Documents.Run" /> for displaying localized enums.

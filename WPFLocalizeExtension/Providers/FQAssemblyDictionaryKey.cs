@@ -9,7 +9,7 @@
 
 using System.Linq;
 
-namespace WPFLocalizeExtension.Providers
+namespace WpfLocalisationExtension.Providers
 {
     /// <summary>
     /// A class that bundles the key, assembly and dictionary information.

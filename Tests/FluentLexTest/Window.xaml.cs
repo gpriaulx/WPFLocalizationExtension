@@ -10,7 +10,8 @@
 #endregion
 
 using System.Globalization;
-using WPFLocalizeExtension.Engine;
+using WpfLocalisationExtension.Engine;
+
 namespace Fluent.Sample.Foundation
 {
     // ATTENTION: You need use Fluent.RibbonWindow. 

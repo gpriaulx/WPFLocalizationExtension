@@ -174,9 +174,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\WPFLocalizeExtension\WPFLocalizeExtension.csproj">
+    <ProjectReference Include="..\..\WPFLocalizeExtension\WpfLocalisationExtension.csproj">
       <Project>{E8C5B094-2CB4-4C26-87F0-351B03612179}</Project>
-      <Name>WPFLocalizeExtension</Name>
+      <Name>WpfLocalisationExtension</Name>
     </ProjectReference>
     <ProjectReference Include="..\AssemblyTestResourceLib\AssemblyTestResourceLib.csproj">
       <Project>{F8ED06E5-39CA-458B-8B84-E043C335BDE2}</Project>

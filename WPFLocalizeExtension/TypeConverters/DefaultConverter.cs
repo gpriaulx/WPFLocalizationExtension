@@ -7,13 +7,13 @@
 #endregion
 
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
-using System.Globalization;
-using System.ComponentModel;
-using System.Collections.Generic;
 
-namespace WPFLocalizeExtension.TypeConverters
+namespace WpfLocalisationExtension.TypeConverters
 {
     /// <summary>
     /// Implements a standard converter that calls itself all known type converters.

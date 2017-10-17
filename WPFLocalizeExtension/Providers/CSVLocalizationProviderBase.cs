@@ -8,13 +8,13 @@
 
 using System;
 using System.Collections.Generic;
-using System.Windows;
-using System.Resources;
-using System.Reflection;
-using System.Globalization;
 using System.Collections.ObjectModel;
+using System.Globalization;
+using System.Reflection;
+using System.Resources;
+using System.Windows;
 
-namespace WPFLocalizeExtension.Providers
+namespace WpfLocalisationExtension.Providers
 {
     /// <summary>
     /// The base for CSV file providers.

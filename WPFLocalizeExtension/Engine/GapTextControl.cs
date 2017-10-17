@@ -18,7 +18,7 @@ using System.Windows.Documents;
 using System.Windows.Markup;
 using System.Xml;
 
-namespace WPFLocalizeExtension.Engine
+namespace WpfLocalisationExtension.Engine
 {
     /// <summary>
     /// A gap text control.
